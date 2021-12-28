@@ -100,6 +100,7 @@ node {
   output_stream: "face_flag_tensor"
   options {
     [mediapipe.SwitchContainerOptions.ext] {
+      select: 1
       contained_node: {
         calculator: "SplitTensorVectorCalculator"
         options: {
@@ -165,6 +166,7 @@ node {
   output_stream: "LANDMARKS:landmarks"
   options: {
     [mediapipe.SwitchContainerOptions.ext] {
+      select: 1
       contained_node: {
         calculator: "TensorsToFaceLandmarks"
       }
