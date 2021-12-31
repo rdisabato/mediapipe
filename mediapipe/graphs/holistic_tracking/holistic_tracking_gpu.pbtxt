@@ -47,6 +47,11 @@ node {
   output_stream: "RIGHT_HAND_LANDMARKS:right_hand_landmarks"
 }
 
+node {
+  calculator: "DataSenderHolisticCalculator"
+  input_stream: "FACE_LANDMARKS:face_landmarks"
+}
+
 # Gets image size.
 node {
   calculator: "ImagePropertiesCalculator"
